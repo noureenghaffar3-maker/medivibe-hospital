@@ -1,0 +1,41 @@
+rules_version = '2';
+
+// Copy-paste these rules into Firebase Console ->
+// Firestore Database -> Rules tab. (Client-portal ke liye safe access)
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users profile: har patient sirf apna profile read/update kar sakta hai
+    match /users/{userId} {
+      allow read, update, delete: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null;
+    }
+
+    // Appointments: patient sirf apni appointments dekh/cancel/delete kar sakta hai
+    match /appointments/{appointmentId} {
+      allow read, update, delete: if request.auth != null
+        && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.auth.uid == request.resource.data.userId;
+    }
+
+    // Medical records: patient sirf apne medical records dekh/save kar sakta hai
+    match /medicalRecords/{recordId} {
+      allow read, update, delete: if request.auth != null
+        && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.auth.uid == request.resource.data.userId;
+    }
+  }
+}
+
+// ============================================================
+// NOTE:
+// Agar aap doctor/staff ke liye alag portal banate ho, to doctors
+// ko appointments update karne (e.g. status "confirmed" -> "completed")
+// ki permission deni hogi. Is liye matches me ek "staff" role check
+// add kar sakte ho, example:
+//   allow update, read: if request.auth != null
+//     && (request.auth.uid == resource.data.userId
+//         || get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin');
+// ============================================================

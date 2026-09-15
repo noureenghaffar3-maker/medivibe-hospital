@@ -62,8 +62,8 @@
             </div>
           </div>
           <a href="contact.html">Contact Us</a>
-          <a href="#" class="btn-nav">
-            Sign Up
+          <a href="auth.html" class="btn-nav">
+            Login / Sign Up
             <span class="btn-arrow-circle"><i class="fa-solid fa-chevron-right"></i></span>
           </a>
         </nav>
@@ -137,21 +137,21 @@
             <div class="form-row">
               <div class="form-group">
                 <label>Full Name</label>
-                <input type="text" placeholder="Enter your full name" required>
+                <input type="text" name="name" placeholder="Enter your full name" required>
               </div>
               <div class="form-group">
                 <label>Email Address</label>
-                <input type="email" placeholder="Enter your email" required>
+                <input type="email" name="email" placeholder="Enter your email" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label>Phone Number</label>
-                <input type="tel" placeholder="Enter your phone number" required>
+                <input type="tel" name="phone" placeholder="Enter your phone number" required>
               </div>
               <div class="form-group">
                 <label>Department</label>
-                <select required>
+                <select name="department" required>
                   <option value="">Select Department</option>
                   <option>Cardiology</option>
                   <option>Neurology</option>
@@ -167,11 +167,11 @@
             <div class="form-row">
               <div class="form-group">
                 <label>Preferred Date</label>
-                <input type="date" required>
+                <input type="date" name="date" required>
               </div>
               <div class="form-group">
                 <label>Preferred Time</label>
-                <select required>
+                <select name="time" required>
                   <option value="">Select Time</option>
                   <option>9:00 AM - 10:00 AM</option>
                   <option>10:00 AM - 11:00 AM</option>
@@ -184,7 +184,7 @@
             </div>
             <div class="form-group">
               <label>Additional Notes</label>
-              <textarea placeholder="Any specific concerns or requirements..."></textarea>
+              <textarea name="notes" placeholder="Any specific concerns or requirements..."></textarea>
             </div>
             <div class="form-submit">
               <button type="submit" class="btn btn-primary">Book Appointment <i class="fa-solid fa-chevron-right"></i></button>
@@ -288,6 +288,12 @@
     </div>
   </footer>
 
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
   <script src="medivibe.js"></script>
+  <script src="nav-auth.js"></script>
+  <script src="appointment-book.js"></script>
 </body>
 </html>

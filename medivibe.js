@@ -162,6 +162,21 @@ function initAppointmentForm() {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var btn = form.querySelector('.btn');
+
+    if (window.MediVibe && typeof window.MediVibe.bookAppointment === 'function') {
+      var data = {
+        name: form.querySelector('[name="name"]') ? form.querySelector('[name="name"]').value : '',
+        email: form.querySelector('[name="email"]') ? form.querySelector('[name="email"]').value : '',
+        phone: form.querySelector('[name="phone"]') ? form.querySelector('[name="phone"]').value : '',
+        department: form.querySelector('[name="department"]') ? form.querySelector('[name="department"]').value : '',
+        date: form.querySelector('[name="date"]') ? form.querySelector('[name="date"]').value : '',
+        time: form.querySelector('[name="time"]') ? form.querySelector('[name="time"]').value : '',
+        notes: form.querySelector('[name="notes"]') ? form.querySelector('[name="notes"]').value : ''
+      };
+      window.MediVibe.bookAppointment(data, btn);
+      return;
+    }
+
     var original = btn.textContent;
     btn.textContent = 'Booking...';
     btn.disabled = true;
