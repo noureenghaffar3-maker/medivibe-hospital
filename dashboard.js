@@ -515,7 +515,7 @@
   } else if (auth) {
     auth.onAuthStateChanged(async function (user) {
       if (!user) {
-        window.location.href = 'auth.html?returnTo=' + encodeURIComponent('dashboard.html');
+        window.location.href = 'auth.html?returnTo=' + encodeURIComponent('patient-dashboard/patient-dashboard.html');
         return;
       }
       currentUser = user;
