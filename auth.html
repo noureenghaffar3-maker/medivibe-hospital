@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Sign Up - Medivibe Hospital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="medivibe.css">
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body class="auth-body">
+
+  <div class="auth-card">
+    <div class="auth-brand">
+      <a href="index.html"><img src="images/logo.png" alt="MediVibe Logo"></a>
+    </div>
+
+    <div class="auth-tabs" role="tablist">
+      <button type="button" class="auth-tab active" id="tab-login" data-tab="login">Login</button>
+      <button type="button" class="auth-tab" id="tab-signup" data-tab="signup">Sign Up</button>
+    </div>
+
+    <!-- ============ LOGIN ============ -->
+    <form class="auth-form active" id="login-form">
+      <h3>Welcome back 👋</h3>
+      <p class="auth-sub">Login to manage your appointments and medical records.</p>
+
+      <div class="form-group">
+        <label for="login-email">Email Address</label>
+        <input type="email" class="form-control" id="login-email" placeholder="Enter your email" autocomplete="email" required>
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <input type="password" class="form-control" id="login-password" placeholder="Enter your password" autocomplete="current-password" required>
+      </div>
+      <div class="forgot-link">
+        <button type="button" id="forgot-link">Forgot password?</button>
+      </div>
+
+      <button type="submit" class="auth-btn" id="login-btn">Login <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+
+      <div class="auth-divider">or</div>
+      <button type="button" class="google-btn" id="google-btn">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+        Continue with Google
+      </button>
+
+      <p class="auth-message" id="login-msg"></p>
+      <p class="auth-switch">New to MediVibe? <button type="button" class="switch-tab" data-target="signup">Create an account</button></p>
+    </form>
+
+    <!-- ============ SIGNUP ============ -->
+    <form class="auth-form" id="signup-form">
+      <h3>Create Account</h3>
+      <p class="auth-sub">Join MediVibe to book appointments and access your health records.</p>
+
+      <div class="form-group">
+        <label for="su-name">Full Name</label>
+        <input type="text" class="form-control" id="su-name" placeholder="Enter your full name" autocomplete="name" required>
+      </div>
+      <div class="form-group">
+        <label for="su-email">Email Address</label>
+        <input type="email" class="form-control" id="su-email" placeholder="Enter your email" autocomplete="email" required>
+      </div>
+      <div class="form-group">
+        <label for="su-phone">Phone Number</label>
+        <input type="tel" class="form-control" id="su-phone" placeholder="Enter your phone number" autocomplete="tel" required>
+      </div>
+      <div class="ds-grid-row">
+        <div class="form-group">
+          <label for="su-password">Password</label>
+          <input type="password" class="form-control" id="su-password" placeholder="Min 6 characters" autocomplete="new-password" required>
+        </div>
+        <div class="form-group">
+          <label for="su-confirm">Confirm Password</label>
+          <input type="password" class="form-control" id="su-confirm" placeholder="Retype password" autocomplete="new-password" required>
+        </div>
+      </div>
+
+      <button type="submit" class="auth-btn" id="signup-btn">Create Account <i class="fa-solid fa-user-plus"></i></button>
+
+      <div class="auth-divider">or</div>
+      <button type="button" class="google-btn" id="google-btn-su">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+        Continue with Google
+      </button>
+
+      <p class="auth-message" id="signup-msg"></p>
+      <p class="auth-switch">Already have an account? <button type="button" class="switch-tab" data-target="login">Login here</button></p>
+    </form>
+
+    <p class="auth-footlink">
+      <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </p>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="auth-page.js"></script>
+</body>
+</html>

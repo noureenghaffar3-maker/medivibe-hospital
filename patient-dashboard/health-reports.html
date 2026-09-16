@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Reports - Medivibe Hospital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="patient.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- SIDEBAR START -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <img src="../images/logo.png" alt="Medivibe icon">
+        <h2>Medivibe</h2>
+        <button class="sidebar-collapse-btn" id="sidebarCollapseBtn" aria-label="Collapse sidebar">
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+      </div>
+      <div class="user-card">
+        <div class="avatar" data-pd-avatar="side">...</div>
+        <div class="user-info">
+          <h4 data-pd-name>Loading...</h4>
+          <p data-pd-email>...</p>
+          <span class="role-badge"><i class="fa-solid fa-user"></i> Patient</span>
+        </div>
+      </div>
+      <div class="menu-section">
+        <span class="menu-label">MAIN MENU</span>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="patient-dashboard.html" class="nav-link" data-page="patient-dashboard.html">
+              <i class="fa-solid fa-border-all"></i><span>Overview</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="appointments.html" class="nav-link" data-page="appointments.html">
+              <i class="fa-solid fa-calendar-check"></i><span>Appointments</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link" data-page="doctors.html">
+              <i class="fa-solid fa-user-doctor"></i><span>Doctors</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="prescriptions.html" class="nav-link" data-page="prescriptions.html">
+              <i class="fa-solid fa-file-prescription"></i><span>Prescriptions</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="invoices.html" class="nav-link" data-page="invoices.html">
+              <i class="fa-solid fa-file-invoice-dollar"></i><span>Invoices &amp; Billing</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown show-dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle active">
+              <i class="fa-solid fa-heart-pulse"></i><span>Health Tracking</span>
+              <i class="fa-solid fa-chevron-down dropdown-caret"></i>
+            </a>
+            <ul class="sub-menu">
+              <li><a href="vitals-dashboard.html" data-page="vitals-dashboard.html">Vitals Dashboard</a></li>
+              <li><a href="health-reports.html" data-page="health-reports.html" class="active">Health Reports</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle">
+              <i class="fa-solid fa-robot"></i><span>AI Assistant</span>
+              <i class="fa-solid fa-chevron-down dropdown-caret"></i>
+            </a>
+            <ul class="sub-menu">
+              <li><a href="ai-ask-questions.html" data-page="ai-ask-questions.html">Ask Health Questions</a></li>
+              <li><a href="ai-suggestions.html" data-page="ai-suggestions.html">AI Suggestions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="settings.html" class="nav-link" data-page="settings.html">
+              <i class="fa-solid fa-gear"></i><span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- SIDEBAR END -->
+
+    <!-- MAIN CONTENT START -->
+    <main class="main-content">
+      <header class="main-header">
+        <button type="button" class="sidebar-toggle-btn" id="sidebarToggleBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="page-title">
+          <h1>Health Reports</h1>
+          <p>Diagnostic and lab reports at your fingertips</p>
+        </div>
+        <div class="header-spacer"></div>
+        <div class="header-actions">
+          <div class="dropdown notification-dropdown">
+            <button type="button" class="notification-btn" id="notifDropdown" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="fa-regular fa-bell"></i>
+              <span class="notification-dot"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end notif-dropdown-menu shadow-lg border-0 p-0" aria-labelledby="notifDropdown">
+              <div class="notif-header d-flex align-items-center justify-content-between px-3 py-2 border-bottom">
+                <h6 class="m-0 fw-bold fs-6">Notifications</h6>
+              </div>
+              <div class="notif-body" id="notifContainer"></div>
+            </div>
+          </div>
+          <div class="dropdown profile-dropdown">
+            <button type="button" class="profile-btn" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="avatar" data-pd-avatar="head">...</span>
+              <span>
+                <span class="pname d-block" data-pd-name>Loading...</span>
+                <span class="prole">Patient</span>
+              </span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end profile-drop-menu" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="settings.html"><i class="fa-solid fa-id-card"></i> My Profile</a>
+              <a class="dropdown-item" href="appointments.html"><i class="fa-solid fa-calendar-check"></i> My Appointments</a>
+              <a class="dropdown-item" href="invoices.html"><i class="fa-solid fa-file-invoice-dollar"></i> Billing</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-danger" href="javascript:void(0)" data-pd-logout><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <div class="page-intro">
+          <div>
+            <h2>Lab &amp; Diagnostic Reports</h2>
+            <p>Download or view your latest results.</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <!-- DONUT: report status -->
+          <div class="dash-card">
+            <div class="card-head">
+              <h3><i class="fa-solid fa-chart-pie"></i> Report Status Overview</h3>
+            </div>
+            <div class="chart-box" style="height:230px;"><canvas id="reportDonut"></canvas></div>
+          </div>
+
+          <!-- SUMMARY KPI -->
+          <div class="kpi-grid" style="grid-template-columns:1fr 1fr;">
+            <div class="kpi-card">
+              <div class="kpi-icon blue"><i class="fa-solid fa-file-circle-check"></i></div>
+              <div class="kpi-meta"><h5 id="rpReady">0</h5><p>Ready</p></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon orange"><i class="fa-solid fa-clock"></i></div>
+              <div class="kpi-meta"><h5 id="rpPending">0</h5><p>Pending</p></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon cyan"><i class="fa-solid fa-gears"></i></div>
+              <div class="kpi-meta"><h5 id="rpProcessing">0</h5><p>Processing</p></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon green"><i class="fa-solid fa-folder-open"></i></div>
+              <div class="kpi-meta"><h5 id="rpTotal">0</h5><p>Total Reports</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="card-head">
+            <h3><i class="fa-solid fa-table"></i> Diagnostic Reports</h3>
+            <input type="text" class="form-control-med" id="rpSearch" placeholder="Search report or doctor..." style="min-width:220px;">
+          </div>
+          <div class="table-responsive">
+            <table class="table-med">
+              <thead>
+                <tr>
+                  <th>Report Name</th>
+                  <th>Type</th>
+                  <th>Doctor</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="reportTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore-compat.js"></script>
+  <script src="../firebase-config.js"></script>
+  <script src="patient-data.js"></script>
+  <script src="patient-common.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  <script src="health-reports.js"></script>
+</body>
+</html>

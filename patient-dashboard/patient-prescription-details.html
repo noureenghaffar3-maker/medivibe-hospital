@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prescription Details - Medivibe Hospital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="patient.css">
+  <style>
+    @media print {
+      .main-header, .sidebar, .sidebar-backdrop, .no-config-bar, .no-print { display: none !important; }
+      .main-content { margin: 0 !important; }
+      .page-content { padding: 20px; }
+      .dash-card { box-shadow: none !important; border: 1px solid #ccc !important; }
+      body { background: #fff !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- SIDEBAR START -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <img src="../images/logo.png" alt="Medivibe icon">
+        <h2>Medivibe</h2>
+        <button class="sidebar-collapse-btn" id="sidebarCollapseBtn" aria-label="Collapse sidebar">
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+      </div>
+      <div class="user-card">
+        <div class="avatar" data-pd-avatar="side">...</div>
+        <div class="user-info">
+          <h4 data-pd-name>Loading...</h4>
+          <p data-pd-email>...</p>
+          <span class="role-badge"><i class="fa-solid fa-user"></i> Patient</span>
+        </div>
+      </div>
+      <div class="menu-section">
+        <span class="menu-label">MAIN MENU</span>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="patient-dashboard.html" class="nav-link" data-page="patient-dashboard.html">
+              <i class="fa-solid fa-border-all"></i><span>Overview</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="appointments.html" class="nav-link" data-page="appointments.html">
+              <i class="fa-solid fa-calendar-check"></i><span>Appointments</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link" data-page="doctors.html">
+              <i class="fa-solid fa-user-doctor"></i><span>Doctors</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="prescriptions.html" class="nav-link" data-page="prescriptions.html">
+              <i class="fa-solid fa-file-prescription"></i><span>Prescriptions</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="invoices.html" class="nav-link" data-page="invoices.html">
+              <i class="fa-solid fa-file-invoice-dollar"></i><span>Invoices &amp; Billing</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle">
+              <i class="fa-solid fa-heart-pulse"></i><span>Health Tracking</span>
+              <i class="fa-solid fa-chevron-down dropdown-caret"></i>
+            </a>
+            <ul class="sub-menu">
+              <li><a href="vitals-dashboard.html" data-page="vitals-dashboard.html">Vitals Dashboard</a></li>
+              <li><a href="health-reports.html" data-page="health-reports.html">Health Reports</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle">
+              <i class="fa-solid fa-robot"></i><span>AI Assistant</span>
+              <i class="fa-solid fa-chevron-down dropdown-caret"></i>
+            </a>
+            <ul class="sub-menu">
+              <li><a href="ai-ask-questions.html" data-page="ai-ask-questions.html">Ask Health Questions</a></li>
+              <li><a href="ai-suggestions.html" data-page="ai-suggestions.html">AI Suggestions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="settings.html" class="nav-link" data-page="settings.html">
+              <i class="fa-solid fa-gear"></i><span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- SIDEBAR END -->
+
+    <!-- MAIN CONTENT START -->
+    <main class="main-content">
+      <header class="main-header no-print">
+        <button type="button" class="sidebar-toggle-btn" id="sidebarToggleBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="page-title">
+          <h1>Prescription Details</h1>
+          <p>Full prescription view — print or download</p>
+        </div>
+        <div class="header-spacer"></div>
+        <div class="header-actions no-print">
+          <button class="mini-btn" onclick="window.location.href='prescriptions.html'"><i class="fa-solid fa-arrow-left"></i> Back</button>
+          <button class="mini-btn solid" id="printBtn"><i class="fa-solid fa-print"></i> Print</button>
+          <button class="mini-btn primary-med" id="downloadBtn"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <div class="dash-card" id="rxCard" style="max-width:900px;margin:0 auto;">
+          <!-- injected by prescription-details.js -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore-compat.js"></script>
+  <script src="../firebase-config.js"></script>
+  <script src="patient-data.js"></script>
+  <script src="patient-common.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  <script src="prescription-details.js"></script>
+</body>
+</html>

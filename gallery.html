@@ -1,0 +1,470 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Doctors - Medivibe Hospital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="medivibe.css">
+  <link rel="stylesheet" href="mahnoor-chrome.css">
+</head>
+<body>
+
+  <!-- topline start -->
+  <nav class="navbar navbar-expand-lg top">
+    <div class="container-lg">
+      <a class="navbar-brand p-0" href="index.html"><p class="text-white para mt-1" style="font-size: 14px;"><i class="fa-regular fa-envelope"></i>  info@medivibehospital.com</p></a>
+      <div class="collapse navbar-collapse" id="navbarTopline">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active fs-6 text" href="tel:+5551234567"><p class="text-white mt-3" style="font-size: 14px;"><i class="fa-solid fa-mobile-screen"></i>  +(555) 123-4567</p></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mt-2 mb-lg-0 icons">
+          <li class="nav-item"><a class="social-icon-link" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li class="nav-item"><a class="social-icon-link" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li class="nav-item"><a class="social-icon-link" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li class="nav-item"><a class="social-icon-link" href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+          <li class="nav-item"><a class="social-icon-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- topline end -->
+
+  <!-- Navbar start -->
+  <nav class="navbar navbar-expand-lg my-nav">
+    <div class="container-lg">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="MediVibe Logo" class="nav-logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mx-auto gap-3 mb-2 mb-lg-0">
+          <li class="nav-item ms-3"><a class="nav-link m-2 fw-medium" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link m-2 fw-medium" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link m-2 fw-medium custom-dropdown-link" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services <i class="fa-solid fa-plus dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu animate slideIn" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="services.html">Services</a></li>
+              <li><a class="dropdown-item" href="services.html#services-details">Services Details</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active m-2 fw-medium custom-dropdown-link" aria-current="page" href="#" id="doctorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Doctors <i class="fa-solid fa-plus dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu animate slideIn" aria-labelledby="doctorsDropdown">
+              <li><a class="dropdown-item" href="gallery.html">Doctors</a></li>
+              <li><a class="dropdown-item" href="gallery.html#details">Doctors Details</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link m-2 fw-medium custom-dropdown-link" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Pages <i class="fa-solid fa-plus dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu animate slideIn" aria-labelledby="pagesDropdown">
+              <li><a class="dropdown-item" href="appointment.html">Appointment</a></li>
+              <li><a class="dropdown-item" href="dashboard.html">My Dashboard</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link m-2 fw-medium" href="appointment.html">Contact Us</a></li>
+        </ul>
+        <div class="header-cta-buttons d-flex align-items-center">
+          <a href="auth.html" class="custom-gradient-btn text-center fw-medium">
+            <span>Sign Up</span>
+            <span class="btn-arrow-circle"><i class="fa-solid fa-chevron-right"></i></span>
+          </a>
+          <a href="auth.html" class="text-center btn-signin fw-medium ms-5">
+            <span>Log In</span>
+            <span class="btn-arrow-circle"><i class="fa-solid fa-chevron-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <section class="page-hero" style="background-image: linear-gradient(100deg, rgba(2,0,36,0.8) 0%, rgba(9,9,121,0.65) 45%, rgba(0,212,255,0.55) 100%), url('images/medical-team.jpg');">
+    <div class="container">
+      <h1>Our Doctors</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator">&rarr;</span>
+        <span class="current">Doctors</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Meet Our Specialists</h2>
+        <p>Meet our specialist doctors who bring expertise and compassionate care to every patient.</p>
+      </div>
+      <div class="team-grid" id="doctors-grid">
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-1.jpg" alt="Dr. John Smith"></div>
+          <div class="team-info">
+            <h3>Dr. John Smith</h3>
+            <p class="designation">Director & Chief Medical Officer</p>
+            <p class="message">"Our commitment is to provide healthcare that combines medical excellence with genuine compassion."</p>
+            <div class="team-meta">
+              <span><i class="fa-solid fa-hospital"></i> Leadership & Administration</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 25+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MD, MBA</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Monday - Friday</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 9:00 AM - 5:00 PM</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-2.jpg" alt="Dr. Sarah Johnson"></div>
+          <div class="team-info">
+            <h3>Dr. Sarah Johnson</h3>
+            <p class="designation">Medical Superintendent</p><div class="team-meta">
+              <span><i class="fa-solid fa-hospital"></i> Hospital Administration</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 20+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MD (Hospital Admin)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Monday - Saturday</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 8:00 AM - 4:00 PM</span></div>
+            </div>
+            <p class="message">"Every patient deserves the best possible care delivered with dignity, respect, and understanding."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-3.jpg" alt="Dr. Michael Chen"></div>
+          <div class="team-info">
+            <h3>Dr. Michael Chen</h3>
+            <p class="designation">Head of Cardiology</p><div class="team-meta">
+              <span><i class="fa-solid fa-heart-pulse"></i> Cardiology</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 18+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MD, DM (Cardiology)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Mon, Wed & Fri</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 9:00 AM - 2:00 PM</span></div>
+            </div>
+            <p class="message">"Advancing cardiac care through innovation and a patient-first approach is our driving force."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-4.jpg" alt="Dr. Emily Davis"></div>
+          <div class="team-info">
+            <h3>Dr. Emily Davis</h3>
+            <p class="designation">Head of Neurology</p><div class="team-meta">
+              <span><i class="fa-solid fa-brain"></i> Neurology</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 16+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MD, DM (Neurology)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Tue, Thu & Sat</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 10:00 AM - 3:00 PM</span></div>
+            </div>
+            <p class="message">"We combine cutting-edge neuroscience with compassionate care to transform lives."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-5.jpg" alt="Dr. Robert Williams"></div>
+          <div class="team-info">
+            <h3>Dr. Robert Williams</h3>
+            <p class="designation">Interventional Cardiologist</p><div class="team-meta">
+              <span><i class="fa-solid fa-heart-pulse"></i> Cardiology</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 15+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MD, DNB (Cardiology)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Monday - Friday</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 11:00 AM - 6:00 PM</span></div>
+            </div>
+            <p class="message">"Restoring heart health with precision, technology, and a compassionate touch."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-6.jpg" alt="Dr. Priya Sharma"></div>
+          <div class="team-info">
+            <h3>Dr. Priya Sharma</h3>
+            <p class="designation">Cardiologist</p><div class="team-meta">
+              <span><i class="fa-solid fa-heart-pulse"></i> Cardiology</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 12+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MD, DM (Cardiology)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Tue, Thu & Sat</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 9:00 AM - 1:00 PM</span></div>
+            </div>
+            <p class="message">"Your heart deserves expert care delivered with warmth and dedication."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-7.jpg" alt="Dr. David Martinez"></div>
+          <div class="team-info">
+            <h3>Dr. David Martinez</h3>
+            <p class="designation">Neurologist</p><div class="team-meta">
+              <span><i class="fa-solid fa-brain"></i> Neurology</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 14+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MD, DM (Neurology)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Mon, Wed & Sat</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 10:00 AM - 4:00 PM</span></div>
+            </div>
+            <p class="message">"Every mind matters &mdash; I am dedicated to protecting your neurological health."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-8.jpg" alt="Dr. Hannah Lee"></div>
+          <div class="team-info">
+            <h3>Dr. Hannah Lee</h3>
+            <p class="designation">Radiologist</p><div class="team-meta">
+              <span><i class="fa-solid fa-x-ray"></i> Radiology</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 11+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MD (Radiology)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Monday - Saturday</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 8:00 AM - 3:00 PM</span></div>
+            </div>
+            <p class="message">"Advanced imaging to reveal the answers that lead to accurate treatment."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-9.jpg" alt="Dr. James Wilson"></div>
+          <div class="team-info">
+            <h3>Dr. James Wilson</h3>
+            <p class="designation">Dental Surgeon</p><div class="team-meta">
+              <span><i class="fa-solid fa-tooth"></i> Dental Care</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 13+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> BDS, MDS (Oral Surgery)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Mon, Wed & Fri</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 10:00 AM - 5:00 PM</span></div>
+            </div>
+            <p class="message">"Healthy smiles start with gentle, personalized dental care for every patient."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-10.jpg" alt="Dr. Ayesha Khan"></div>
+          <div class="team-info">
+            <h3>Dr. Ayesha Khan</h3>
+            <p class="designation">Orthodontist</p><div class="team-meta">
+              <span><i class="fa-solid fa-tooth"></i> Dental Care</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 10+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> BDS, MDS (Orthodontics)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Tue, Thu & Sat</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 9:00 AM - 4:00 PM</span></div>
+            </div>
+            <p class="message">"Transforming smiles with modern orthodontic solutions and care."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-11.jpg" alt="Dr. Andrew Brown"></div>
+          <div class="team-info">
+            <h3>Dr. Andrew Brown</h3>
+            <p class="designation">Orthopedic Surgeon</p><div class="team-meta">
+              <span><i class="fa-solid fa-bone"></i> Orthopedics</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 17+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MS (Orthopedics)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Mon - Fri</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 9:00 AM - 5:00 PM</span></div>
+            </div>
+            <p class="message">"Restoring mobility and strength so you can live life without limits."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-12.jpg" alt="Dr. Fatima Hassan"></div>
+          <div class="team-info">
+            <h3>Dr. Fatima Hassan</h3>
+            <p class="designation">Sports Medicine Specialist</p><div class="team-meta">
+              <span><i class="fa-solid fa-bone"></i> Orthopedics</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 9+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MD (Sports Medicine)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Mon, Tue, Thu & Sat</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 3:00 PM - 7:00 PM</span></div>
+            </div>
+            <p class="message">"Helping athletes recover faster and perform at their very best."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-13.jpg" alt="Dr. Lucas Moore"></div>
+          <div class="team-info">
+            <h3>Dr. Lucas Moore</h3>
+            <p class="designation">Pediatrician</p><div class="team-meta">
+              <span><i class="fa-solid fa-child"></i> Pediatrics</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 12+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MD (Pediatrics)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Monday - Saturday</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 10:00 AM - 5:00 PM</span></div>
+            </div>
+            <p class="message">"Caring for children with kindness, from their very first smile."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-14.jpg" alt="Dr. Maria Rodriguez"></div>
+          <div class="team-info">
+            <h3>Dr. Maria Rodriguez</h3>
+            <p class="designation">Pediatric Surgeon</p><div class="team-meta">
+              <span><i class="fa-solid fa-child"></i> Pediatrics</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 11+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MS, MCh (Pediatric Surgery)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Tue, Thu & Sat</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 9:00 AM - 1:00 PM</span></div>
+            </div>
+            <p class="message">"Surgical precision and gentle care for our youngest patients."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-15.jpg" alt="Dr. Kevin Thompson"></div>
+          <div class="team-info">
+            <h3>Dr. Kevin Thompson</h3>
+            <p class="designation">Ophthalmologist</p><div class="team-meta">
+              <span><i class="fa-solid fa-eye"></i> Ophthalmology</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 14+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MS (Ophthalmology)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Monday - Friday</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 9:00 AM - 3:00 PM</span></div>
+            </div>
+            <p class="message">"Protecting your vision with advanced eye care and modern surgery."</p></div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-16.jpg" alt="Dr. Sofia Almeida"></div>
+          <div class="team-info">
+            <h3>Dr. Sofia Almeida</h3>
+            <p class="designation">Pathologist</p><div class="team-meta">
+              <span><i class="fa-solid fa-microscope"></i> Pathology</span>
+              <span><i class="fa-solid fa-briefcase-medical"></i> 12+ Years Experience</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> MBBS, MD (Pathology)</span>
+            </div>
+            <div class="team-schedule">
+              <h4><i class="fa-solid fa-calendar-check"></i> Availability</h4>
+              <div class="schedule-days"><i class="fa-solid fa-calendar-days"></i> <span><strong>Days:</strong> Monday - Saturday</span></div>
+              <div class="schedule-hours"><i class="fa-regular fa-clock"></i> <span><strong>Timings:</strong> 8:00 AM - 4:00 PM</span></div>
+            </div>
+            <p class="message">"Accurate diagnosis is the foundation of effective treatment and care."</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-navy text-white pt-5 pb-3" >
+  <div class="container">
+    <div class="row gy-4 pt-2">
+      <div class="col-lg-3 col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img src="images/logo.png" alt="Medivibe icon" class="footer-logo-icon" style="width:45px; height:auto;">
+          <h3 class="fw-bold text-info mb-0">Medivibe</h3>
+        </div>
+        <p class="text-light small opacity-75">
+          Providing compassionate, world-class healthcare since 2001. Your health and well-being are our top priorities.
+        </p>
+        <div class="d-flex gap-2 mt-4">
+          <a href="#" class="btn-social fb-btn rounded-circle d-flex align-items-center justify-content-center"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="btn btn-outline-info rounded-circle d-flex align-items-center justify-content-center wa-glow"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="btn-social ig-btn rounded-circle d-flex align-items-center justify-content-center"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="btn btn-outline-info rounded-circle d-flex align-items-center justify-content-center yt-glow"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 ps-md-5">
+        <h5 class="fw-bold mb-3 text-white border-bottom border-info pb-2" style="width: fit-content;">Quick Links</h5>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="about.html" class="text-light text-decoration-none hover-link"><i class="fa-solid fa-minus text-info me-2 small"></i>About Us</a></li>
+          <li><a href="services.html" class="text-light text-decoration-none hover-link"><i class="fa-solid fa-minus text-info me-2 small"></i>Our Services</a></li>
+          <li><a href="gallery.html" class="text-light text-decoration-none hover-link"><i class="fa-solid fa-minus text-info me-2 small"></i>Our Doctors</a></li>
+          <li><a href="appointment.html" class="text-light text-decoration-none hover-link"><i class="fa-solid fa-minus text-info me-2 small"></i>Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3 text-white border-bottom border-info pb-2" style="width: fit-content;">Contact Us</h5>
+        <ul class="list-unstyled d-flex flex-column gap-3 mt-3">
+          <li class="d-flex align-items-center gap-3">
+            <span class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px;"><i class="fa-solid fa-phone-alt"></i></span>
+            <div>
+              <small class="text-light opacity-75 d-block">Emergency Hotline</small>
+              <a href="tel:+5551234567" class="text-white text-decoration-none fw-bold">+1 (555) 123-4567</a>
+            </div>
+          </li>
+          <li class="d-flex align-items-center gap-3">
+            <span class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px;"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <small class="text-light opacity-75 d-block">Email Address</small>
+              <a href="mailto:info@medivibehospital.com" class="text-white text-decoration-none">info@medivibehospital.com</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3 text-white border-bottom border-info pb-2" style="width: fit-content;">Opening Hours</h5>
+        <div class="bg-dark bg-opacity-25 p-3 rounded border border-secondary border-opacity-25 mb-3">
+          <div class="d-flex justify-content-between mb-2 pb-1 border-bottom border-secondary border-opacity-10">
+            <span class="text-light small">Mon - Thu</span>
+            <span class="text-info small fw-bold">08:00 AM - 05:00 PM</span>
+          </div>
+          <div class="d-flex justify-content-between mb-2 pb-1 border-bottom border-secondary border-opacity-10">
+            <span class="text-light small">Fri - Sat</span>
+            <span class="text-info small fw-bold">08:00 AM - 05:00 PM</span>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span class="text-light small">Sunday</span>
+            <span class="text-danger small fw-bold">Emergency Only</span>
+          </div>
+        </div>
+        <div class="newsletter-wrapper">
+          <input type="email" placeholder="Your Email Here..." />
+          <button type="submit">Subscribe <i class="fa-solid fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4 border-secondary border-opacity-50">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+        <p class="mb-0 text-light opacity-75 small">&copy; 2026 Medivibe. All Rights Reserved.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <a href="#" class="text-light opacity-75 text-decoration-none small me-3 hover-link">Terms of Service</a>
+        <a href="#" class="text-light opacity-75 text-decoration-none small hover-link">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="glow-cursor-dot"></div>
+<div class="glow-cursor-trail"></div>
+<button id="backToTopBtn" class="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="mahnoor-chrome.js"></script>
+  <script src="medivibe.js"></script>
+  <script src="nav-auth.js"></script>
+</body>
+</html>
