@@ -20,7 +20,7 @@ Medivibe Hospital ki static website + **patient portal** (Login/Signup + Client 
 |------|------|
 | `index.html` | Home |
 | `auth.html` + `auth-page.js` | Login / Sign Up / Google / Forgot password |
-| `dashboard.html` + `dashboard.js` | Client Dashboard |
+| `patient-dashboard/` | Client Dashboard (Health Tracking + AI Assistant) |
 | `doctors-data.js` | Doctors ki list (gallery se) |
 | `firebase-config.js` | Firebase init — **config yahan paste karna hai** |
 | `nav-auth.js` | Har page ke header me Login/Dashboard button state |
@@ -42,7 +42,7 @@ Koi server ki zaroorat nahi — project folder me se kisi bhi `.html` file ko **
 ```
 index.html        → Home
 auth.html         → Login / Sign Up
-dashboard.html    → Client Dashboard
+patient-dashboard/patient-dashboard.html → Client Dashboard
 appointment.html  → Book Appointment
 ```
 
