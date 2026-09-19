@@ -107,6 +107,19 @@
     if (window.innerWidth > 992 && backdrop) backdrop.classList.remove('show');
   });
 
+  /* ---------- sidebar dropdown toggle ---------- */
+  document.querySelectorAll('.nav-item.dropdown > .dropdown-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      var item = toggle.closest('.nav-item.dropdown');
+      if (!item) return;
+      var wasOpen = item.classList.contains('show-dropdown');
+      document.querySelectorAll('.nav-item.dropdown.show-dropdown').forEach(function (i) {
+        i.classList.remove('show-dropdown');
+      });
+      if (!wasOpen) item.classList.add('show-dropdown');
+    });
+  });
+
   /* ---------- nav active state ---------- */
   var currentPage = (window.location.pathname.split('/').pop() || 'patient-dashboard.html').split('?')[0];
 
@@ -218,6 +231,44 @@
   }
 
   applySavedState();
+
+  /* ---------- dark / light theme toggle (mahnoor-style) ---------- */
+  var themeToggle = document.getElementById('theme-toggle');
+  if (!themeToggle) {
+    var headerActions = document.querySelector('.header-actions');
+    if (headerActions) {
+      var label = document.createElement('label');
+      label.className = 'ui-switch';
+      label.title = 'Toggle Theme';
+      label.innerHTML = '<input type="checkbox" id="theme-toggle">' +
+        '<div class="slider"><div class="circle"></div></div>';
+      headerActions.insertBefore(label, headerActions.firstChild);
+      themeToggle = label.querySelector('#theme-toggle');
+    }
+  }
+
+  function applySavedTheme() {
+    var saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (e) {}
+    if (saved === 'dark') {
+      document.body.classList.add('dark-theme');
+      if (themeToggle) themeToggle.checked = true;
+    }
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('change', function () {
+      if (themeToggle.checked) {
+        document.body.classList.add('dark-theme');
+        try { localStorage.setItem('theme', 'dark'); } catch (e) {}
+      } else {
+        document.body.classList.remove('dark-theme');
+        try { localStorage.setItem('theme', 'light'); } catch (e) {}
+      }
+    });
+  }
+
+  applySavedTheme();
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);
